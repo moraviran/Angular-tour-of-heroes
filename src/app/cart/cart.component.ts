@@ -14,10 +14,6 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.getItems();
   }
 
-  getShippingPrices() {
-    return this.http.get<{ type: string; price: number }[]>(
-      '/assets/shipping.json'
-    );
   }
 
   ngOnInit(): void {}
